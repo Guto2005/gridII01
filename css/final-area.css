@@ -1,0 +1,60 @@
+.container {
+    display: grid;
+    /*grid-template-columns: 1fr 2fr;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 200px;
+    grid-template-areas:
+    "first second seven third" 
+    "fourth six seven eight"
+    "nine ten seven eleven"
+    "five seven ";
+    gap: 8px;
+}
+
+.item1 {
+    background-color: blue;
+    grid-area: first;
+}
+
+.item2 {
+    background-color: blueviolet;
+    grid-area: second;
+}
+
+.item3 {
+    background-color: brown;
+    grid-area: third;
+}
+
+.item4 {
+    background-color: darkgreen;
+    grid-area: fourth;
+}
+.item5 {
+    background-color: darkgreen;
+    grid-area: five;
+}
+.item6 {
+    background-color: darkgreen;
+    grid-area: six;
+}
+.item7 {
+    background-color: darkgreen;
+    grid-area: seven;
+}
+.item8 {
+    background-color: darkgreen;
+    grid-area: eight;
+}
+.item9 {
+    background-color: darkgreen;
+    grid-area: nine;
+}
+.item10 {
+    background-color: darkgreen;
+    grid-area: ten;
+}
+.item11 {
+    background-color: darkgreen;
+    grid-area: eleven;
+}

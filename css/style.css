@@ -6,9 +6,10 @@
     grid-template-columns: repeat(2, 1fr 200px);
     /*
     row-gap: 20px;
-    column-gap: 20px;
-    /*grid-template-rows: 100px 100px 100px;*/
-    gap:20px 60px; /* linha | coluna */
+    column-gap: 20px;*/
+    /*grid-template-rows: repeat(10, 200px);*/
+    gap:8px; /* linha | coluna */
+    grid-auto-rows: 200px;
 }
 
 .item1{
@@ -17,6 +18,9 @@
 
 .item2{
     background-color: blue;
+    /*grid-row-start: 1;
+    grid-row-end: 3;*/
+    grid-row: 1 / 3;
 }
 
 .item3{
@@ -37,4 +41,70 @@
 
 .item7{
     background-color: deepskyblue;
+}
+
+.item8{
+    background-color: yellow;
+}
+
+.item9{
+    background-color: thistle;
+}
+
+.item10{
+    background-color: gold;
+    /*grid-column-start: 3;
+    grid-column-end: 5;*/
+
+    grid-column: 3/5;
+}
+
+.item11{
+    background-color: indigo;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+.conteiner-area {
+    display: grid;
+    /*grid-template-columns: 1fr 2fr;*/
+    grid-template-areas:
+    "topo topo topo" 
+    "menu-nav menu-nav login"
+    "marketing principal principal"
+    "marketing principal principal"
+    "marketing principal principal"
+    "rodape rodape rodape";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 200px 100px auto auto auto 100px;
+}
+
+.border{
+    border: 1px solid black;
+}
+
+.top-area {
+    grid-area: topo;
+}
+
+.nav-area {
+    grid-area: menu-nav;
+}
+
+.login-area {
+    grid-area: login;
+    grid-template-columns: 2fr;
+    grid-template-rows: 100px;
+}
+
+.content-area {
+    grid-area: principal;
+}
+
+.mkt-area {
+    grid-area: marketing;
+}
+
+.footer-area{
+    grid-area: rodape;
 }
